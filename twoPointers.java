@@ -25,6 +25,26 @@ public class twoPointers {
         return null;
     }
 
+    public boolean judgeSquareSum(int c) {
+        int i = 0;
+        int j = (int) Math.sqrt(c) + 1;
+        while (i <= j){
+            if (i * i + j * j == c){
+                return true;
+            }
+            else if (i * i + j * j > c || i * i + j * j < 0) //int overflow
+                j --;
+            else if (i * i + j * j < c)
+                i ++;
+            
+        }
+        return false;
+        }
+        return false;
+
+        
+    }
+
 
 
 
